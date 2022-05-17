@@ -1,0 +1,70 @@
+{% extends 'app/base_sin_carrusel.html'%}
+{% load static %}
+{% block contenido_sin_carrusel %}
+
+
+<main class="main">
+  <div class="container">
+    <h2>Seguimiento De Compra</h2>
+    <section class="container-fluid">
+      <div class="progreso-bar pb-5">
+        <div class="progress" style="height:50px">
+          <div class="progress-bar" style="width:50%;height:50px">
+          <h5>Producto en camino</h1>
+          </div>
+        </div>
+        <div class="descripcion-bar pt-5">
+          <form class="form-inline" action="/action_page.php">
+            <input class="form-control mr-sm-3" type="text" placeholder="Colocar codigo">
+            <button class="btn btn-success" type="submit">Buscar</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="products-seguimiento">
+        <!-- .products*4>img.products_img+.productdescription>h3.producttitle+span.producto_price -->
+
+        <img src="{% static 'app/img/imagen_sin_imagen.png' %}" alt="" class="products__img" width="200px">
+        <div class="product__description-seguimiento">
+          <h3 class="product__titulo">Comida Dog Chow</h3>
+          <h5 class="product__precio">$9990</h5>
+        </div>
+      </div>
+      <div class="products-seguimiento">
+        <img src="{% static 'app/img/imagen_sin_imagen.png' %}" alt="" class="products__img" width="200px">
+        <div class="product__description-seguimiento">
+          <h3 class="product__titulo">Comida Whiskas</h3>
+          <h5 class="product__precio">$9990</h5>
+        </div>
+      </div>
+      <div class="products-seguimiento">
+        <img src="{% static 'app/img/imagen_sin_imagen.png' %}" alt="" class="products__img" width="200px">
+        <div class="product__description-seguimiento">
+          <h3 class="product__titulo">Cama para Perro</h3>
+          <h5 class="product__precio">$9990</h5>
+        </div>
+      </div>
+      <div class="products-seguimiento">
+        <img src="{% static 'app/img/imagen_sin_imagen.png' %}" alt="" class="products__img" width="200px">
+        <div class="product__description-seguimiento">
+          <h3 class="product__titulo">Cama para Gatos</h3>
+          <h5 class="product__precio">$9990</h5>
+        </div>
+        
+      </div>
+      <div class="products-seguimiento">
+
+       <div class="product__description-seguimiento">
+          <h3 class="product__titulo">total $: 00000</h3>
+        </div>
+      </div>
+
+
+    </section>
+    
+  </div>
+
+</main>
+
+{% endblock  %}

@@ -1,0 +1,42 @@
+{% extends 'app/base_logeada.html'%}
+
+{% load crispy_forms_tags %}
+{% load static %}}
+{% block contenido_iniciado %}
+
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container container-fluid">
+<table class="table table-condensed table-striped bg-white rounded">
+    <tr>
+        <thead>
+   
+            <td>ID_USUARIO</td>
+            <td>NOMBRE</td>
+            <td>CONTRASEÑA</td>
+            <td>FECHA INGRESO</td>
+            <td>FECHA MODIFICACION</td>
+        </thead>
+        <Tbody>
+            {% for aux in listarUsuarios %}
+            <tr>
+                <td>{{ aux.id_usuario }}</td>
+                <td>{{ aux.nombre }}</td>
+                <td>{{ aux.contraseña }}</td>
+                <td>{{ aux.fecha_ingreso }}</td>
+                <td>{{ aux.fecha_modificacion }}</td>
+                <td>
+                    <a href="{% url 'modificarUsuario' aux.nombre %}" class="btn btn-info">Modificar</a>
+                    <a href="{% url 'eliminarUsuario' aux.nombre %}" class="btn btn-info">Eliminar</a>
+                    <!-- <a onclick ="eliminarUsu({{ aux.nombre }})" class="btn btn-danger">Eliminar</a> -->
+                </td>
+
+            </tr>
+            {% endfor %}
+        </Tbody>
+
+    
+</table>
+</div>
+</div>
+{% endblock  %}

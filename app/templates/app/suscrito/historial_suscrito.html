@@ -1,0 +1,53 @@
+{% extends 'app/suscrito/base_sin_carru_suscrito.html'%}
+{% load static %}
+{% block contenido_sin_carru_sus %}
+
+<main class="tabla">
+  <div class="jumbotron jumbotron-fluid text-center">
+    <div class="container col-12 col-sm-6">
+    <h2>Historial de compras</h2>
+    <table class="table-dark">
+      <thead class="thead-dark">
+        <tr>
+          <th>Imagen</th>
+          <th>Descripcion</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> <img src="{% static 'app/img/producto_sin_imagen.png' %}" alt="" width="200px"></td>
+          <td>Comida Dog Chow</td>
+          <td>$9990</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td> <img src="{% static 'app/img/producto_sin_imagen.png' %}" alt="" width="200px"></td>
+          <td>Comida Dog Chow</td>
+          <td>$9990</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td> <img src="{% static 'app/img/producto_sin_imagen.png' %}" alt="" width="200px"></td>
+          <td>Comida Dog Chow</td>
+          <td>$9990</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td> <img src="{% static 'app/img/producto_sin_imagen.png' %}" alt="" width="200px"></td>
+          <td>Comida Dog Chow</td>
+          <td>$9990</td>
+          <td>1</td>
+        </tr>
+   
+
+      </tbody>
+    </table>
+    
+  </div>
+  </div>
+
+</main>
+
+{% endblock  %}

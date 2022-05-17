@@ -1,0 +1,19 @@
+{% extends 'app/base_sin_carrusel.html'%}
+{% load static %}
+{% block contenido_sin_carrusel %}
+<div class="jumbotron jumbotron-fluid text-center">
+    <div class="container col-12 col-sm-4">
+        <img src="{% static 'app/img/logo-superzoo.svg' %}" alt="" width="400px">
+        <h1>Confirmacion de tu desuscripcion</h1>
+        <p>hola de acuerdo a tu solicitud, tu suscripcion ha sido cancelada.</p>
+        <p>Estariamos en cantados de qie volvieras con nosotros, si cambias de opinion solo debes reactivar tu suscripcion para disfrutar de las ofertas que tenemos para ti.</p>
+        
+         <div class="c-group">
+        <a  class="btn btn-danger" href="{% url 'index_sesion_iniciada' %}">😢Desactivar suscripcion😢</a>  
+        
+    </div>
+    </div>
+    
+    
+</div>
+{% endblock  %}

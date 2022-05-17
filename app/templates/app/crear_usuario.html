@@ -1,0 +1,65 @@
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.8/sweetalert2.min.js"
+          integrity="sha512-7x7HoEikRZhV0FAORWP+hrUzl75JW/uLHBbg2kHnPdFmScpIeHY0ieUVSacjusrKrlA/RsA2tDOBvisFmKc3xw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.8/sweetalert2.css"
+          integrity="sha512-40/Lc5CTd+76RzYwpttkBAJU68jKKQy4mnPI52KKOHwRBsGcvQct9cIqpWT/XGLSsQFAcuty1fIuNgqRoZTiGQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <script src="{% static 'app/js/mensajes.js' %}"></script>
+       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.14/dist/sweetalert2.all.min.js"></script>
+       <!-- Latest compiled and minified CSS -->
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+       <!-- jQuery library -->
+       <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+   
+       <!-- Popper JS -->
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+   
+       <!-- Latest compiled JavaScript -->
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+       
+       
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+       <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+
+<div class="jumbotron text-center">
+    <img src="{% static 'app/img/perro-oliendo.gif' %}" alt="user-login" width="200px ">
+    <p class="text">Bienvenido SuperZoo</p>
+    <p class="text">Ingrese sus datos a continuacion para poder comprar en nuestra tienda</p>
+    <!-- <form class="login-form">
+        <input type="text" placeholder="Nombre de usuario">
+        <input type="password" placeholder="Contraseña">
+        <button href="{% url 'index_sesion_iniciada' %} ">crear usuario</button>
+        <a  class="button" href="{% url 'index_sesion_iniciada' %}">Pagar</a>
+        
+    </form> -->
+
+    <div class="jumbotron text-center-col-lg-6">
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table>
+            {{ form|crispy}}
+        </table>
+        
+            <input  type="submit" class="btn btn-success" value="Crear perfil" >
+            <a href="{% url 'index_sesion_iniciada' %}">Continue</a>
+        
+    
+    </form>
+    {{ mensaje }}
+    </div>
+
+</div>
+
+
+
+
+  

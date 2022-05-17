@@ -1,0 +1,18 @@
+{% extends 'app/base_sin_carrusel.html'%}
+{% load static %}
+{% block contenido_sin_carrusel %}
+
+<div class="jumbotron jumbotron-fluid text-center">
+    <div class="container col-12 col-sm-4">
+    <h1>🌟Suscribase a la Fundacion🌟</h1>
+    <p>apolla a la fundación sin fines de lucro y mejorar la venta y el
+        despacho de sus productos.</p>
+    <picture>
+        <img class="c-image logoImage" src="{% static 'app/img/4JU.gif' %}" alt="Logotipos de Xbox Game Pass y EA Play" width="200px" >
+   </picture>
+    <div class="c-group">
+        <a href="{% url 'index_suscrito' %}" class="btn btn-success" c-glyph data-cta="learn" aria-label=""> <span> 🤩 haga click aqui para susbcribirse 🤩</span> </a>
+    </div>
+</div>
+</div>
+{% endblock  %}
